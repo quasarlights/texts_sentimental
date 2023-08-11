@@ -1,7 +1,12 @@
 from sentiment_analysis_spanish import sentiment_analysis
 
-sentiment = sentiment_analysis.SentimentAnalysisSpanish()
-print(sentiment.sentiment("me parece terrible esto que me estás diciendo"))
+
+class SentimentalProcessor:
+    @staticmethod
+    def process(text):
+        sentiment = sentiment_analysis.SentimentAnalysisSpanish()
+        return sentiment.sentiment(text)
+        #print(sentiment.sentiment("me parece terrible esto que me estás diciendo"))
 
 
 """
